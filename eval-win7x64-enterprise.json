@@ -44,17 +44,15 @@
         "floppy/01-install-wget.cmd",
         "floppy/_download.cmd",
         "floppy/_packer_config.cmd",
-        "floppy/_post_update_install.bat",
-        "floppy/disablewinupdate.bat",
         "floppy/fixnetwork.ps1",
         "floppy/install-winrm.cmd",
         "floppy/networkprompt.bat",
         "floppy/oracle-cert.cer",
         "floppy/passwordchange.bat",
-        "floppy/powerconfig.bat",
-        "floppy/upgrade-wua.bat",
-        "floppy/pagefile.bat",
-        "floppy/xx-update.bat",
+        "floppy/xx-boxstarter.bat",
+        "floppy/boxstarter.ps1",
+        "floppy/package.ps1",
+        "floppy/Test-Command.ps1",
         "floppy/win7x64-enterprise/Autounattend.xml",
         "floppy/zz-start-transports.cmd"
       ],
@@ -74,13 +72,13 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "8069"
+          "4096"
         ],
         [
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "4"
+          "2"
         ]
       ],
       "vm_name": "eval-win7x64-enterprise",
@@ -169,7 +167,7 @@
     "iso_checksum": "15ddabafa72071a06d5213b486a02d5b55cb7070",
     "iso_url": "http://care.dlservice.microsoft.com/dl/download/evalx/win7/x64/EN/7600.16385.090713-1255_x64fre_enterprise_en-us_EVAL_Eval_Enterprise-GRMCENXEVAL_EN_DVD.iso",
     "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
-    "update": "true",
+    "update": "false",
     "version": "0.1.0"
   }
 }
